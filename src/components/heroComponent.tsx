@@ -1,19 +1,33 @@
+import { ComponentChildren } from "preact";
+
 type HeroProps = {
-    title1: string;
-    subtitle: string;
+    title?: ComponentChildren;
+    subtitle?: ComponentChildren;
+    description?: string;
 }
 
-const HeroComponent = ({ title1, subtitle }: HeroProps) => {
+const HeroComponent = (props: HeroProps) => {
     return (
         <section class="hero has-background-light is-halfheight">
             <div class="hero-body">
                 <div class="">
-                    <p class="title has-text-link">
-                    {title1}
-                    </p>
-                    <p class="subtitle">
-                    {subtitle}
-                    </p>
+                    {(props.title || props.subtitle || props.description) && (
+                        <header>
+                            {props.title && (
+                                <h1 class="title">
+                                {props.title}
+                                </h1>
+                            )}
+                            {props.subtitle && (
+                                <h2 class="subtitle">
+                                {props.subtitle}
+                                </h2>
+                            )}
+                            {props.description && (
+                                <p>{props.description}</p>
+                            )}
+                        </header>
+                    )}
                 </div>
             </div>
         </section>

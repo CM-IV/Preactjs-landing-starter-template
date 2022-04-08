@@ -1,150 +1,68 @@
 import { Fragment } from "preact"
+import { FeatureComponent } from "./featureComponent"
+import { FooterComponent } from "./footerComponent"
+import { HeroComponent } from "./heroComponent"
+import { MediaComponent } from "./mediaComponent"
 
-type MainProps = {
-    featureTitle: string;
-    featureSubtitle: string;
-}
-
-const MainSection = ({ 
-    featureTitle, 
-    featureSubtitle,
- }: MainProps) => {
+const MainSection = () => {
     return (
         <Fragment>
-            <section class="section">
-                <div class="columns is-centered is-multiline is-mobile">
-                    <div class="column is-one-third">
-                        <article class="media">
-                            <div class="media-content">
-                                <figure class="image is-64x64" id="logo">
-                                    <img class="is-rounded" src="https://ik.imagekit.io/xbkhabiqcy9/img/8408-9516_rOgPNpTDl.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1649357309737" />
-                                </figure>
-                                <p class="subtitle has-text-centered pt-2">Your title</p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="column is-one-third">
-                        <article class="media">
-                            <div class="media-content">
-                                <figure class="image is-64x64" id="logo">
-                                    <img class="is-rounded" src="https://ik.imagekit.io/xbkhabiqcy9/img/1085-8766_j1o8sa6gY.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1649357323494" />
-                                </figure>
-                                <p class="subtitle has-text-centered pt-2">Your title</p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="column is-one-third">
-                        <article class="media">
-                            <div class="media-content">
-                                <figure class="image is-64x64" id="logo">
-                                    <img class="is-rounded" src="https://ik.imagekit.io/xbkhabiqcy9/img/8304-7449_iFeGbfuvj.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1649357323553" />
-                                </figure>
-                                <p class="subtitle has-text-centered pt-2">Your title</p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-            <section class="section">
-                <p class="subtitle has-text-centered"><strong>{featureTitle}</strong></p>
-                <p class="has-text-info has-text-centered">{featureSubtitle}</p>
-            </section>
-            <section class="section">
-                <div class="columns is-centered is-multiline">
-                    <div class="column is-half">
-                        <div class="card">
-                            <div class="card-content">
-                                <p class="subtitle has-text-centered"><strong>Your Title</strong></p>
-                                <p class="has-text-centered">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  
-                                tempor incididunt ut labore et dolore magna aliqua. 
-                                Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. 
-                                Nulla facilisi morbi tempus iaculis urna id. Sed risus pretium quam vulputate 
-                                dignissim suspendisse in. Lectus mauris ultrices eros in cursus turpis massa tincidunt dui. 
-                                Hac habitasse platea dictumst vestibulum rhoncus. 
-                                Integer eget aliquet nibh praesent tristique magna sit. 
-                                Purus non enim praesent elementum facilisis leo. 
-                                Volutpat commodo sed egestas egestas fringilla phasellus. 
-                                Egestas purus viverra accumsan in nisl nisi scelerisque eu. Elit at imperdiet dui accumsan sit.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column is-half">
-                        <div class="card">
-                            <div class="card-image">
-                                <figure class="image is-4by3" id="logo">
-                                    <img src="https://ik.imagekit.io/xbkhabiqcy9/img/undraw_business_shop_re_ruf4_Zr6XQR2p4.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1649360106929" />
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section">
-                <div class="columns is-centered is-multiline">
-                    <div class="column is-half">
-                        <div class="card">
-                            <div class="card-content">
-                                <p class="subtitle has-text-centered"><strong>Your Title</strong></p>
-                                <p class="has-text-centered">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  
-                                tempor incididunt ut labore et dolore magna aliqua. 
-                                Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. 
-                                Nulla facilisi morbi tempus iaculis urna id. Sed risus pretium quam vulputate 
-                                dignissim suspendisse in. Lectus mauris ultrices eros in cursus turpis massa tincidunt dui. 
-                                Hac habitasse platea dictumst vestibulum rhoncus. 
-                                Integer eget aliquet nibh praesent tristique magna sit. 
-                                Purus non enim praesent elementum facilisis leo. 
-                                Volutpat commodo sed egestas egestas fringilla phasellus. 
-                                Egestas purus viverra accumsan in nisl nisi scelerisque eu. Elit at imperdiet dui accumsan sit.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column is-half">
-                        <div class="card">
-                            <div class="card-image">
-                                <figure class="image is-4by3" id="logo">
-                                    <img src="https://ik.imagekit.io/xbkhabiqcy9/img/undraw_newspaper_re_syf5_8WIeKTBza.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1649360115378" />
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="section">
-                <div class="columns is-centered is-multiline">
-                    <div class="column is-half">
-                        <div class="card">
-                            <div class="card-content">
-                                <p class="subtitle has-text-centered"><strong>Your Title</strong></p>
-                                <p class="has-text-centered">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod  
-                                tempor incididunt ut labore et dolore magna aliqua. 
-                                Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. 
-                                Nulla facilisi morbi tempus iaculis urna id. Sed risus pretium quam vulputate 
-                                dignissim suspendisse in. Lectus mauris ultrices eros in cursus turpis massa tincidunt dui. 
-                                Hac habitasse platea dictumst vestibulum rhoncus. 
-                                Integer eget aliquet nibh praesent tristique magna sit. 
-                                Purus non enim praesent elementum facilisis leo. 
-                                Volutpat commodo sed egestas egestas fringilla phasellus. 
-                                Egestas purus viverra accumsan in nisl nisi scelerisque eu. Elit at imperdiet dui accumsan sit.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column is-half">
-                        <div class="card">
-                            <div class="card-image">
-                                <figure class="image is-4by3" id="logo">
-                                    <img src="https://ik.imagekit.io/xbkhabiqcy9/img/undraw_hooked_re_vl59_nHFTs7uqs.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1649360115376" />
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            <HeroComponent 
+                title={
+                    <>
+                    <h1>{"Website template for\n"}</h1>
+                    <span class="has-text-link">Preactjs</span>
+                    </>
+                }
+            />
+            <MediaComponent 
+                title={
+                    <>
+                        {"Your Title"}
+                    </>
+                }
+                mediaImg1="https://ik.imagekit.io/xbkhabiqcy9/img/8408-9516_rOgPNpTDl.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1649357309737"
+                mediaImg2="https://ik.imagekit.io/xbkhabiqcy9/img/1085-8766_j1o8sa6gY.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1649357323494"
+                mediaImg3="https://ik.imagekit.io/xbkhabiqcy9/img/8304-7449_iFeGbfuvj.svg?ik-sdk-version=javascript-1.4.3&updatedAt=1649357323553"
+            />
+            <FeatureComponent 
+                title={
+                    <>
+                    {"Your Title"}
+                    </>
+                }
+                subtitle={
+                    <>
+                    {"Features"}
+                    </>
+                }
+                description="
+                Morbi tristique senectus et netus et malesuada fames. 
+                Amet consectetur adipiscing elit duis tristique. 
+                Gravida rutrum quisque non tellus orci ac auctor augue mauris. 
+                Adipiscing commodo elit at imperdiet dui accumsan.
+                Ac turpis egestas integer eget aliquet nibh. 
+                Nunc id cursus metus aliquam eleifend mi. 
+                Tempus iaculis urna id volutpat lacus laoreet non curabitur. 
+                Vestibulum lorem sed risus ultricies tristique nulla aliquet.
+                In nisl nisi scelerisque eu ultrices vitae auctor. 
+                Fermentum leo vel orci porta non pulvinar. 
+                Facilisis sed odio morbi quis commodo odio aenean sed.
+                "
+            />
+            <FooterComponent 
+                copyright={
+                    <>
+                        <p>
+                            <strong>
+                            &copy; <em>Preactjs Starter</em>
+                            </strong>
+                        </p>
+                    </>
+                }
+                footerImg="https://ik.imagekit.io/xbkhabiqcy9/img/starter2_yb5kYf7Nfv.png?ik-sdk-version=javascript-1.4.3&updatedAt=1649374251980"
+            />
+            
         </Fragment>
     )
 }
