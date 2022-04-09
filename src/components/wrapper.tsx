@@ -1,6 +1,10 @@
-import { Fragment } from "preact";
+import { ComponentChildren, Fragment } from "preact";
 
-const Wrapper = (props: any) => {
+type WrapperProps = {
+  children: ComponentChildren
+}
+
+const Wrapper = (props: WrapperProps) => {
   return (
     <Fragment>
       <main class="main-container">

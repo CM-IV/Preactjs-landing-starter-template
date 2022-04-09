@@ -11,7 +11,7 @@ const Nav = () => {
         aria-label="main navigation"
       >
         <div class="navbar-brand">
-        <a class="navbar-item mt-2" href="/">
+          <a class="navbar-item mt-2" href="/">
             <img
               src="https://ik.imagekit.io/xbkhabiqcy9/img/starter2_yb5kYf7Nfv.png?ik-sdk-version=javascript-1.4.3&updatedAt=1649374251980"
               class="image-responsive"
@@ -47,4 +47,3 @@ const Nav = () => {
 };
 
 export { Nav };
-

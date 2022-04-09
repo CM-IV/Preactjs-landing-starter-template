@@ -1,7 +1,12 @@
+import { ComponentChildren } from "preact";
 import { Nav } from "../components/nav";
 import { Wrapper } from "../components/wrapper";
 
-const Layout = (props: any) => {
+type LayoutProps = {
+  children: ComponentChildren
+}
+
+const Layout = (props: LayoutProps) => {
   return (
     <Wrapper>
       <Nav />
