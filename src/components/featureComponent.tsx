@@ -11,7 +11,7 @@ const FeatureComponent = (props: FeatureProps) => {
     <Fragment>
       <section class="section">
         <p class="subtitle has-text-centered">
-          <strong>{props.title}</strong>
+          <strong class="has-text-white">{props.title}</strong>
         </p>
         <p class="has-text-info has-text-centered">{props.subtitle}</p>
       </section>
@@ -21,7 +21,7 @@ const FeatureComponent = (props: FeatureProps) => {
             <div class="card">
               <div class="card-content">
                 <p class="subtitle has-text-centered">
-                  <strong>Your Title</strong>
+                  <strong class="has-text-white">Your Title</strong>
                 </p>
                 <p class="has-text-centered">{props.description}</p>
               </div>
